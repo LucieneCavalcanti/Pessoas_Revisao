@@ -48,6 +48,15 @@ public class App {
                     }
                     System.out.println("-------------------------------");
                     break;
+                case 4:
+                    for (PJ j : listaPJs) {
+                        System.out.println("---- PJs ----");
+                        System.out.println("ID:" + j.getId());
+                        System.out.println("Nome:"+j.getNome());
+                        System.out.println("CNPJ:"+j.getCnpj());
+                    }
+                    System.out.println("-------------------------------");
+                    break;
                 default:
                     break;
             }
