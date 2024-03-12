@@ -11,12 +11,16 @@ public class App {
         ArrayList<PJ> listaPJs = new ArrayList<>();
         int opcao=0;
         do {
+            try{
             System.out.println("Escolha uma opção:"+
             "\n1 - Cadastrar PF"+
             "\n2 - Cadastrar PJ"+
             "\n3 - Listar PFs"+
             "\n4 - Listar PJs"+
-            "\n5 - Sair");
+            "\n6 - Buscar por CPF"+
+            "\n7 - Buscar por CNPJ"+
+            "\n8 - Buscar por NOME (PF e PJ)"+
+            "\n10 - Sair");
             opcao = teclado.nextInt();
             switch (opcao) {
                 case 1:
@@ -60,6 +64,10 @@ public class App {
                 default:
                     break;
             }
+        }//fim do try
+        catch(Exception erro){
+            System.out.println("Erro: "+erro.getMessage());
+        }
         } while (opcao!=5);
     }
 }
